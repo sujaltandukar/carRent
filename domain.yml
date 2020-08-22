@@ -1,0 +1,393 @@
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- bot_challenge
+- thank
+- service
+- about
+- locate_car_dealer
+- choose_car_type
+- choose_budget
+- login_page
+- register_page
+- about_page
+- home_page
+- car_page
+- contact_page
+- profile_page
+- search_page
+- just_try
+- car_menu
+- car_menu_price
+- price_list_400
+- price_list_800
+- price_list_1200
+- car_menu_name
+- car_name_audi
+- car_name_ford
+- car_name_tesla
+- car_name_buggati
+- car_name_lambo
+- car_name_rolls
+- car_name_mercs
+- audi_a3
+- audi_a7
+- audi_s6
+- audi_rs5
+- audi_rs3
+- audi_a8
+- audi_a1
+- ford_mustang
+- tesla_S
+- tesla_3
+- bugatti_1
+- bugatti_2
+- lambo_1
+- lambo_2
+- rolls_1
+- mercs_1
+
+responses:
+  utter_greet:
+  - buttons:
+    - payload: /service
+      title: Our Service
+    - payload: /car_menu
+      title: View Car
+    - payload: /contact_page
+      title: Contact Us
+    - payload: /about_page
+      title: About Us
+    text: Hey! Welcome to Car Rent, How can i help you?
+  utter_goodbye:
+  - text: Bye! Hope to see you soon.
+  utter_affirm:
+  - text: Great, carry on!
+  utter_bot_challenge:
+  - text: 'I am a bot, powered by Rasa. '
+  utter_thank:
+  - text: 'You are most welcome.                     '
+  utter_service:
+  - text: 'We offer service such as renting car to our valuable users. '
+  utter_about:
+  - text: This is website for Car Rent Online System. You can click [Here](http://127.0.0.1:8000/about)
+      for more info.
+  utter_locate_car_dealer:
+  - text: 'No dealer available right now. '
+  utter_choose_car_type:
+  - text: 'We will shortly inform you. '
+  utter_choose_budget:
+  - text: 'Budget! '
+  utter_login_page:
+  - text: 'Click [Here](http://127.0.0.1:8000/accounts/login) for login. '
+  utter_register_page:
+  - text: 'Click [Here](http://127.0.0.1:8000/accounts/register) for register. '
+  utter_about_page:
+  - text: 'Click [Here](http://127.0.0.1:8000/about) for about page. '
+  utter_home_page:
+  - text: 'Click [Here](http://127.0.0.1:8000/) for home page. '
+  utter_car_page:
+  - text: Click [Here](http://127.0.0.1:8000/car) for car page.
+  utter_contact_page:
+  - text: Click [Here](http://127.0.0.1:8000/contact) for contact page.
+  utter_profile_page:
+  - text: Click [Here](http://127.0.0.1:8000/profile) for profile page.
+  utter_search_page:
+  - text: Click [Here](http://127.0.0.1:8000/search) for search page.
+  utter_just_try:
+  - buttons:
+    - payload: /car_page
+      title: Car
+    - payload: /contact_page
+      title: profile
+    text: 'What would you prefer:'
+  utter_car_menu:
+  - buttons:
+    - payload: /car_menu_price
+      title: Car Price
+    - payload: /car_menu_name
+      title: Brand of Car
+    text: How do you want to search car ?
+  utter_car_menu_price:
+  - buttons:
+    - payload: /price_list_400
+      title: Cheap Car (<$400)
+    - payload: /price_list_800
+      title: Budget Car ($399 > | < $800)
+    - payload: /price_list_1200
+      title: Expensive Car (>$799)
+    text: Click on the categories to view cars!
+  utter_price_list_400:
+  - buttons:
+    - payload: /lambo_2
+      title: Lamborghini Sian
+    - payload: /tesla_s
+      title: Tesla Model S
+    - payload: /tesla_3
+      title: Tesla Model 3
+    - payload: /audi_a3
+      title: Audi A3
+    - payload: /audi_a7
+      title: Audi A7
+    - payload: /audi_rs5
+      title: Audi RS5
+    - payload: /audi_s6
+      title: Audi S6
+    text: We offer following Cheap Cars.
+  utter_price_list_800:
+  - buttons:
+    - payload: /audi_rs3
+      title: Audi RS3
+    - payload: /audi_a8
+      title: Audi A8
+    - payload: /audi_a7
+      title: Audi A7
+    - payload: /audi_a3
+      title: Audi A3
+    - payload: /rolls_1
+      title: Rolls Royce Sweprail
+    - payload: /mercs_1
+      title: Mercedes Maybach Exelero
+    - payload: /lambo_1
+      title: Lamborghini Veneno
+    text: We offer following Budget Cars.
+  utter_price_list_1200:
+  - buttons:
+    - payload: /ford_mustang
+      title: Ford Mustang GT
+    - payload: /bugatti_1
+      title: Centodieci
+    - payload: /bugatti_2
+      title: La Voiture Noire
+    text: We offer following Expensive Cars.
+  utter_car_menu_name:
+  - buttons:
+    - payload: /car_name_audi
+      title: Audi
+    - payload: /car_name_ford
+      title: Ford
+    - payload: /car_name_tesla
+      title: Tesla
+    - payload: /car_name_buggati
+      title: Buggati
+    - payload: /car_name_lambo
+      title: Lamborghini
+    - payload: /car_name_rolls
+      title: Rolls-Royce
+    - payload: /car_name_merc
+      title: Mercedes
+    text: 'We offer car from following brands.       '
+  utter_car_name_audi:
+  - buttons:
+    - payload: /audi_a3
+      title: A3
+    - payload: /audi_a7
+      title: A7
+    - payload: /audi_s6
+      title: S6
+    - payload: /audi_rs5
+      title: RS 5
+    - payload: /audi_rs3
+      title: RS 3
+    - payload: /audi_a8
+      title: A8
+    - payload: /audi_a1
+      title: A1
+    text: We offer following Audi Cars.
+  utter_car_name_ford:
+  - buttons:
+    - payload: /ford_mustang
+      title: Mustang GT
+    text: We offer following Ford Cars.
+  utter_car_name_tesla:
+  - buttons:
+    - payload: /tesla_s
+      title: Model S
+    - payload: /tesla_3
+      title: Model 3
+    text: 'We offer following Tesla Car.  '
+  utter_car_name_buggati:
+  - buttons:
+    - payload: /bugatti_1
+      title: La Voiture Noire
+    - payload: /bugatti_2
+      title: Centodieci
+    text: 'We offer following Bugatti Car.  '
+  utter_car_name_lambo:
+  - buttons:
+    - payload: /lambo_1
+      title: Veneno
+    - payload: /lambo_2
+      title: Sian
+    text: 'We offer following Lamborghini Car.  '
+  utter_car_name_rolls:
+  - buttons:
+    - payload: /rolls_1
+      title: Sweptail
+    text: We offer following Rolls-Royce Car.
+  utter_car_name_mercs:
+  - buttons:
+    - payload: /mercs_1
+      title: Maybach Exelero
+    text: We offer following Mercedes Car.
+  utter_audi_a3:
+  - text: 'The Audi A3 is available as a sedan, a convertible and a hatchback. The
+      2020 A3 starts at $33,300 (MSRP), with a destination charge of $995. It gets
+      EPA-estimated 25-30 MPG combined.   '
+    image: 'static/images/car-12.jpg      '
+  utter_audi_a7:
+  - text: The Audi S7 is a hatchback. The 2020 S7 starts at $83,900 (MSRP), with a
+      destination charge of $995. It gets EPA-estimated 22 MPG combined.
+    image: 'media/pics/1.jpg     '
+  utter_audi_s6:
+  - text: The Audi S6 is available as a sedan and a wagon. The 2020 S6 starts at $73,900
+      (MSRP), with a destination charge of $995. It gets EPA-estimated 22 MPG combined.
+    image: 'media/pics/1_1Jj10pK.jpg     '
+  utter_audi_rs5:
+  - text: The Audi RS 5 is available as a coupe, a hatchback and a convertible. The
+      2019 RS 5 starts at $65,824 (MSRP), with a destination charge of $995. It gets
+      EPA-estimated 20-21 MPG combined.
+    image: 'media/pics/1_F3BjwXo.jpg      '
+  utter_audi_rs3:
+  - text: The Audi RS 3 is a sedan. The 2020 RS 3 starts at $56,200 (MSRP), with a
+      destination charge of $995. It gets EPA-estimated 23 MPG combined.
+    image: 'media/pics/1_F3BjwXo.jpg     '
+  utter_audi_a8:
+  - text: The Audi A8 is a sedan. The 2020 A8 starts at $85,200 (MSRP), with a destination
+      charge of $995. It gets EPA-estimated 18-21 MPG combined.
+    image: 'media/pics/audi-r8-g.jpg     '
+  utter_audi_a1:
+  - text: The Audi A7 is a hatchback. The 2020 A7 starts at $69,000 (MSRP), with a
+      destination charge of $995. It gets EPA-estimated 24 MPG combined.
+    image: 'media/pics/1_UW3pKsC.jpg '
+  utter_ford_mustang:
+  - text: "The 2020 Ford Mustang's #2 ranking is based on its score within the Sports\
+      \ Cars category. Currently the Ford Mustang has a score of 8.6 out of 10, which\
+      \ is based on our evaluation of 42 pieces of research and data elements using\
+      \ various sources."
+    image: 'media/pics/ford-mustang-front_3-4th_view.jpg '
+  utter_tesla_S:
+  - text: The 2020 Tesla Model S is one of the highest-rated vehicles in the luxury
+      hybrid and electric car class because of its lightning-quick acceleration and
+      long driving range.
+    image: 'media/pics/tesla-model-s-1563301327.jpg '
+  utter_tesla_3:
+  - text: The 2020 Tesla Model 3 finishes near the top of our luxury hybrid and electric
+      car rankings. The Tesla is surprisingly athletic, and it delivers an incredible
+      all-electric driving range.
+    image: 'media/pics/1_f7Lomfm.jpg '
+  utter_bugatti_1:
+  - text: Leave it to Bugatti to dethrone Rolls-Royce. The one-of-a-kind La Voiture
+      Noire unveiled at the 2019 Geneva Auto Show stands proud as the most expensive
+      new car ever built. The French automaker hasn’t revealed how much it charged
+      for the one-off, Chiron-based model, though rumors point to a price tag in the
+      vicinity of $19 million. We don’t even know who bought it. Some say it belongs
+      to former Volkswagen Group boss Ferdinand Piëch; others believe soccer star
+      Cristiano Ronaldo added it to his collection.
+    image: 'media/pics/1.jpg '
+  utter_bugatti_2:
+  - text: Bugatti took everyone by surprise when it introduced a one-of-a-kind, $19
+      million supercar named La Voiture Noire at the 2019 Geneva Auto Show. We didn’t
+      know it at the time, but the French company was already working on its next
+      masterpiece. The limited-edition, Chiron-based Centodieci is a tribute to the
+      EB110 that lined every car-crazed kid’s bedroom wall during the 1990s. It’s
+      a bargain at $8.9 million, at least compared to the La Voiture Noire. The Centodieci
+      (a name that means one hundred and ten in Italian) wears a more angular design
+      than other members of the Bugatti range. The emblem is positioned above the
+      horseshoe-shaped grille, like it was on the EB110, and five round slots behind
+      each side window create an additional visual link between the two cars. The
+      interior is a lot like the Chiron’s, though it gets model-specific trim pieces,
+      materials, and accents.
+    image: 'media/pics/manny-khoshbin-s-bugatti-chiron-hermes-edition.jpg '
+  utter_lambo_1:
+  - text: Poison. That’s the name Lamborghini chose for the modified Aventador roadster
+      you see above — translated from Italian,of course — built to celebrate the automaker’s
+      50th birthday. We can’t speak for the company’s motivations, but the name is
+      fitting for a vehicle that looks so positively deadly, so undeniably venomous.
+      The car is absolutely stunning from every angle, and to this day, we’re not
+      convinced it isn’t an alien spacecraft surveying our planet for eventual takeover.
+      It just doesn’t seem real. The only thing more remarkable than the look is the
+      price — a whopping $4.5 million, clearly putting it on our list of the most
+      expensive cars.
+    image: media/pics/4-5-million-lamborghini-veneno-700x467-c.jpg
+  utter_lambo_2:
+  - text: The Sian is not an ordinary Lamborghini. Limited to 63 units worldwide,
+      it’s the company’s first production hybrid model. And, it’s not an ordinary
+      hybrid, either. The electric motor is a 48-volt unit stuffed between the engine
+      and the transmission, and it draws power from a supercapacitor instead of a
+      more common lithium-ion battery pack. Lamborghini already showcased this technology
+      in the Terzo Millennio concept unveiled in 2017; it’s a device that charges
+      as quickly as it discharges, so it provides an intense power burst for a short
+      amount of time.
+    image: 'media/pics/1_zwySWOu.jpg '
+  utter_rolls_1:
+  - text: Rolls-Royce will build you anything if you have a thick enough wallet to
+      pay for it. Take the Sweptail, for example. It’s a one-off coupe that a customer
+      commissioned from the ground up. Its design draws inspiration from the brand’s
+      classic models while borrowing styling cues from the world of super-yachts.
+      Nearly every part of this car is unique, and the project took four years from
+      start to finish, which explains why it cost approximately $13 million.
+    image: 'media/pics/1_7k1PKv5.jpg '
+  utter_mercs_1:
+  - text: While not the most expensive car on our list, the Maybach Exelero makes
+      its appearance under Honorable Mentions due to its one-off status. The Maybach
+      was also built way back in 2004, but that actually makes its sticker price more
+      impressive. Adjusted for inflation, the Exelero would cost around $10.1 million
+      in the United States today, which is close to the GDP of a small island nation.
+      Money and Maybach are about as closely related as peanut butter and jelly, but
+      the two-door further justifies its cost with a 700hp, twin-turbo V12 and luxurious
+      amenities.
+    image: 'media/pics/1_Pzs7Omj.jpg'
+actions:
+- utter_greet
+- utter_goodbye
+- utter_affirm
+- utter_bot_challenge
+- utter_thank
+- utter_service
+- utter_about
+- utter_locate_car_dealer
+- utter_choose_car_type
+- utter_choose_budget
+- utter_login_page
+- utter_register_page
+- utter_about_page
+- utter_home_page
+- utter_car_page
+- utter_contact_page
+- utter_profile_page
+- utter_search_page
+- utter_just_try
+- utter_car_menu
+- utter_car_menu_price
+- utter_price_list_400
+- utter_price_list_800
+- utter_price_list_1200
+- utter_car_menu_name
+- utter_car_name_audi
+- utter_car_name_ford
+- utter_car_name_tesla
+- utter_car_name_buggati
+- utter_car_name_lambo
+- utter_car_name_rolls
+- utter_car_name_mercs
+- utter_audi_a3
+- utter_audi_a7
+- utter_audi_s6
+- utter_audi_rs5
+- utter_audi_rs3
+- utter_audi_a8
+- utter_audi_a1
+- utter_ford_mustang
+- utter_tesla_S
+- utter_tesla_3
+- utter_bugatti_1
+- utter_bugatti_2
+- utter_lambo_1
+- utter_lambo_2
+- utter_rolls_1
+- utter_mercs_1
